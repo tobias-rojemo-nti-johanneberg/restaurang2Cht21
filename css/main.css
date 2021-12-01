@@ -1,0 +1,50 @@
+* {
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Eczar', serif;
+}
+
+p {
+  font-family: 'Exo', sans-serif;
+}
+
+.page-wrapper {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-areas:
+  "hd hd"
+  "mn as"
+  "ft ft";
+  grid-template-rows: 15% 70% 15%;
+  grid-template-columns: 80% 20%;
+}
+
+header {
+  grid-area: hd;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-target {
+  flex: 1
+}
+
+main {
+  grid-area: mn;
+}
+
+aside {
+  grid-area: as;
+}
+
+footer {
+  grid-area: ft;
+}

@@ -1,1 +1,0 @@
-I detta projekt krävs inget javascript.
