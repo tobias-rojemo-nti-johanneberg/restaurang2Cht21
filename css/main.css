@@ -14,6 +14,18 @@ p {
 
 ul {
   list-style-image: url(../img/list-icon.svg);
+  position: relative;
+  left: 2rem;
+  width: calc(100% - 2rem);
+}
+
+li {
+  font-size: 3rem;
+  line-height: 1.5rem;
+}
+
+span {
+  font-size: 1.5rem;
 }
 
 .page-wrapper {
@@ -25,7 +37,7 @@ ul {
   "mn as"
   "ft ft";
   grid-template-rows: auto 1fr 15%;
-  grid-template-columns: 80% 20%;
+  grid-template-columns: 1fr 15rem;
 }
 
 header {
@@ -36,6 +48,7 @@ header {
 }
 
 #title, #slogan {
+  margin-left: 10px;
   flex: 1;
   color: #FFFFFF;
 }
@@ -63,28 +76,41 @@ nav {
 }
 
 main {
+  padding: 4px;
   grid-area: mn;
   display: flex;
   flex-direction: row;
+  background-color: #ffeabe;
+  gap: 4px;
+}
+
+#head-chef {
+  margin: -5%;
+  transform: scale(0.8, 0.8);
+  z-index: 0;
 }
 
 .info-card {
   flex: 1;
-  margin: 5px;
+  padding: 0.6rem;
+  background-color: #FFFFFF;
 }
 
 .info-header {
   text-align: center;
   font-size: 1.5rem;
+  line-height: 2.5rem;
 }
 
 .info-text {
   text-align: left;
   font-size: 1rem;
+  line-height: 1.75rem;
 }
 
 aside {
   grid-area: as;
+  background-color: #ffeabe;
 }
 
 footer {
@@ -92,18 +118,22 @@ footer {
   background-color: #862700;
   display: flex;
   flex-direction: row;
+  z-index: 1;
 }
 
 .about {
   flex: 1;
+  margin: 5px;
 }
 
 .legal {
   flex: 2;
+  margin: 5px;
 }
 
 .about-title {
   color: #FFFFFF;
+  font-size: 1rem
 }
 
 .about-text {
@@ -114,6 +144,7 @@ footer {
 
 .legal-title {
   color: #FFFFFF;
+  font-size: 1rem
 }
 
 .legal-text {
