@@ -12,6 +12,10 @@ p {
   font-family: 'Exo', sans-serif;
 }
 
+ul {
+  list-style-image: url(../img/list-icon.svg);
+}
+
 .page-wrapper {
   display: grid;
   width: 100vw;
@@ -28,10 +32,12 @@ header {
   grid-area: hd;
   display: flex;
   flex-direction: column;
+  background-color: #862700;
 }
 
 #title, #slogan {
   flex: 1;
+  color: #FFFFFF;
 }
 
 nav {
@@ -41,15 +47,40 @@ nav {
 }
 
 .nav-target {
-  flex: 1
+  flex: 1;
+  font-size: 1.2rem;
+  font-family: 'Exo', sans-serif;
+  background-color: #ffeabe;
+  color: #862700;
+  text-align: center;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  border: 2px solid #862700;
 }
 
-.nav-label {
-  text-align: center;
+.nav-target:hover {
+  flex: 1.2;
 }
 
 main {
   grid-area: mn;
+  display: flex;
+  flex-direction: row;
+}
+
+.info-card {
+  flex: 1;
+  margin: 5px;
+}
+
+.info-header {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.info-text {
+  text-align: left;
+  font-size: 1rem;
 }
 
 aside {
@@ -58,4 +89,35 @@ aside {
 
 footer {
   grid-area: ft;
+  background-color: #862700;
+  display: flex;
+  flex-direction: row;
+}
+
+.about {
+  flex: 1;
+}
+
+.legal {
+  flex: 2;
+}
+
+.about-title {
+  color: #FFFFFF;
+}
+
+.about-text {
+  color: #FFFFFF;
+  columns: 2;
+  font-size: 0.5rem;
+}
+
+.legal-title {
+  color: #FFFFFF;
+}
+
+.legal-text {
+  color: #FFFFFF;
+  columns: 4;
+  font-size: 0.5rem;
 }
