@@ -76,11 +76,14 @@ nav {
 }
 
 main {
-  padding: 4px;
   grid-area: mn;
+  background-color: #ffeabe;
+}
+
+main.info {
+  padding: 4px;
   display: flex;
   flex-direction: row;
-  background-color: #ffeabe;
   gap: 4px;
 }
 
@@ -90,22 +93,61 @@ main {
   z-index: 0;
 }
 
-.info-card {
+article.info {
   flex: 1;
   padding: 0.6rem;
   background-color: #FFFFFF;
 }
 
-.info-header {
+h3.info {
   text-align: center;
   font-size: 1.5rem;
   line-height: 2.5rem;
 }
 
-.info-text {
+p.info {
   text-align: left;
   font-size: 1rem;
   line-height: 1.75rem;
+}
+
+#location-wrapper {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+}
+
+#location-wrapper > section {
+  grid-area: 1/1/1/1;
+  width: 100%;
+  height: 100%;
+}
+
+img.location {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+article.location {
+  background-color: #ffeabe;
+  width: 100%;
+  height: min-content;
+  z-index: 3;
+  position: absolute;
+  bottom: 0px;
+}
+
+h3.location {
+  color: #862700;
+  z-index: 4;
+}
+
+p.location {
+  color: #862700;
+  z-index: 4;
 }
 
 aside {
@@ -121,33 +163,28 @@ footer {
   z-index: 1;
 }
 
-.about {
+section.about {
   flex: 1;
   margin: 5px;
 }
 
-.legal {
+section.legal {
   flex: 2;
   margin: 5px;
 }
 
-.about-title {
+h3.about, h3.legal {
   color: #FFFFFF;
   font-size: 1rem
 }
 
-.about-text {
+p.about {
   color: #FFFFFF;
   columns: 2;
   font-size: 0.5rem;
 }
 
-.legal-title {
-  color: #FFFFFF;
-  font-size: 1rem
-}
-
-.legal-text {
+p.legal {
   color: #FFFFFF;
   columns: 4;
   font-size: 0.5rem;
