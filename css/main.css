@@ -2,6 +2,7 @@
   margin: 0px;
   border: 0px;
   padding: 0px;
+  overflow: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -28,7 +29,11 @@ span {
   font-size: 1.5rem;
 }
 
-.page-wrapper {
+button {
+  cursor: pointer;
+}
+
+#home-page-wrapper, #locations-page-wrapper {
   display: grid;
   width: 100vw;
   height: 100vh;
@@ -38,6 +43,18 @@ span {
   "ft ft";
   grid-template-rows: auto 1fr 15%;
   grid-template-columns: 1fr 15rem;
+}
+
+#menu-page-wrapper {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-areas:
+  "hd"
+  "mn"
+  "ft";
+  grid-template-rows: auto 1fr 15%;
+  grid-template-columns: 100%;
 }
 
 header {
@@ -53,10 +70,18 @@ header {
   color: #FFFFFF;
 }
 
+#logo {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 90px;
+}
+
 nav {
   flex: 1;
   display: flex;
   flex-direction: row;
+  z-index: 5;
 }
 
 .nav-target {
@@ -69,6 +94,8 @@ nav {
   font-size: 1.2rem;
   text-transform: uppercase;
   border: 2px solid #862700;
+  z-index: 6;
+  transition: flex 1s;
 }
 
 .nav-target:hover {
@@ -78,6 +105,7 @@ nav {
 main {
   grid-area: mn;
   background-color: #ffeabe;
+  z-index: -2;
 }
 
 main.info {
@@ -111,43 +139,69 @@ p.info {
   line-height: 1.75rem;
 }
 
+main.menu {
+  display: flex;
+  flex-direction: row;
+}
+
+section.menu {
+  flex: 1;
+}
+
+aside.menu {
+  border-left: 2px solid #862700;
+  padding: 10px;
+}
+
 #location-wrapper {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: 100%;
+  height: 100%;
+  width: 500%;
+  display: flex;
+  flex-direction: row;
+  margin-left: 0%;
+  transition: margin 1s ease-in-out 0s;
 }
 
 #location-wrapper > section {
-  grid-area: 1/1/1/1;
+  flex: 1;
   width: 100%;
   height: 100%;
 }
 
 img.location {
-  position: absolute;
-  top: 0px;
+  z-index: -1;
   width: 100%;
   height: 100%;
-  z-index: 2;
+  position: absolute;
+  top: 0px;
 }
 
 article.location {
-  background-color: #ffeabe;
   width: 100%;
   height: min-content;
   z-index: 3;
   position: absolute;
-  bottom: 0px;
 }
 
-h3.location {
+h3.location, p.location {
+  background-color: #ffeabe;
   color: #862700;
   z-index: 4;
 }
 
-p.location {
-  color: #862700;
-  z-index: 4;
+aside.location {
+  display: flex;
+  flex-direction: column;
+}
+
+button.location {
+  flex: 1;
+  font-size: 1.2rem;
+  font-family: 'Exo', sans-serif;
+  background-color: #862700;
+  color: #ffeabe;
+  text-align: center;
+  font-size: 1.2rem;
 }
 
 aside {
